@@ -1,0 +1,40 @@
+WARNING: HUGGINGFACE_HUB_TOKEN not set in environment.
+=== RAG (Merged Sections, CoT Prompt) ===
+
+
+You are an assistant specialized in New Zealand social security law.
+Answer STRICTLY from the provided context (excerpts from the NZ Social Security Act 2018).
+Do NOT reference UK benefits (JSA/UC) or anything not in context.
+If the context is insufficient, say so and name the missing section(s).
+
+Context:
+[SSA 2018 – Part 7, Subpart 5, Section 411]: Right of appeal on medical grounds Any applicant or beneficiary may appeal to the medical board against a decision of MSD that is— made in relation to the applicant or beneficiary; and of a kind specified in a row of the following table. The following table is medium in size and has 3 columns. Column 1 is headed Row. Column 2 is headed Assistance or obligations. Column 3 is headed Decision to be appealed. **Row** **Assistance or obligations** **Decision to be appealed** 1 Any benefit Determination— made in reliance on a work ability assessment by a health practitioner under [section 118](#part3-subpart3-s118) (work ability assessment); and whether the person assessed is entitled to a benefit and, if so, what kind of benefit 2 Jobseeker support—on the ground of health condition, injury, or disability Decision that a claim for this benefit is declined, or that this benefit is cancelled, in either case on medical grounds or on grounds relating to a person’s capacity for work 3 Jobseeker support—on the ground of health condition, injury, or disability Determination under section 141(1) that a beneficiary has, while receiving this benefit, the capacity to seek, undertake, and be available for part-time work, and so is required to comply with the work test on and after a date specified in a notice given under section 141(4) 4 Jobseeker support—on the ground of health condition, injury, or disability Decision to confirm, amend, revoke, or replace under [section 141(6)](#part3-subpart3-s141) a determination, and that results in a determination under section 141(1) that a beneficiary has, while receiving this benefit, the capacity to seek, undertake, and be available for part-time work, and so is required to comply with the work test on and after a date specified in a notice given under section 141(4) 5 Jobseeker support—on the ground of health condition, injury, or disability Determination— made in reliance on a work ability assessment by a health practitioner under [section 118](#part3-subpart3-s118) (work ability assessment); and whether the person assessed, being a person receiving this benefit, has for the purposes of [section 141(1)](#part3-subpart3-s141) the capacity to seek, undertake, and be available for part-time work (_see also_ [section 155](#part3-subpart3-s155)) 6 Jobseeker support—except on the ground of health condition, injury, or disability Determination— made in reliance on a work ability assessment by a health practitioner under [section 118](#part3-subpart3-s118) (work ability assessment); and whether the person assessed, being a person receiving this benefit, is entitled on an application or on MSD’s own initiative, to deferral of work-test obligations under [section 155](#part3-subpart3-s155) 7 Jobseeker support—except on the ground of health condition, injury, or disability Decision to decline under section 155 on medical grounds an application— made by a beneficiary granted this benefit; and made under [section 155](#part3-subpart3-s155); and for deferral of all or any of the beneficiary’s work-test obligations 8 Jobseeker support—on any ground Decision on medical grounds under section 155 to revoke a deferral granted under section 155 of all or any of the beneficiary’s work-test obligations 9 Work-test obligations or work-preparation obligations Determination— made in reliance on a work ability assessment by a health practitioner under [section 118](#part3-subpart3-s118) (work ability assessment); and whether the person assessed, being a person who is subject to work-test obligations or work-preparation obligations, has the capacity to meet those obligations 10 Drug-testing obligation Decision under section 250(1)﻿(a) to the effect that a beneficiary does not have a good and sufficient reason, on the ground that the beneficiary is addicted to, or dependent on, controlled drugs, for either or both— not complying with a drug-testing obligation: failing to apply for suitable employment that requires candidates to undertake drug tests 11 Supported living payment—on the ground of restricted work capacity or total blindness Decision that a claim for this benefit is declined, or that this benefit is cancelled, in either case on medical grounds 12 Supported living payment—on the ground of restricted work capacity or total blindness Decision under section 123(1)﻿(a) that a person receiving this benefit has the capacity to comply with obligations under section 125 13 Child disability allowance Decision that a claim for this benefit is declined, or that this benefit is cancelled, in either case on the ground that the child is not a child with a serious disability (as defined in section 79) 14 Veteran’s pension under section 164 of the Veterans’ Support Act 2014 Decision to decline a claim for, or to cancel, this benefit, in either case on the ground of the applicant’s or beneficiary’s mental or physical infirmity
+
+Question:
+Am I eligible for Jobseeker Support if I can't work due to health reasons?
+
+Instructions:
+1) Think through the rules in the context and apply them to the question.
+2) Then produce a concise final answer and cite the specific SSA 2018 section numbers used.
+
+Output format (exact labels):
+Answer: <one-sentence conclusion>
+Reasoning (brief): <2–4 sentences applying the cited rules to the question>
+Citations: [SSA 2018 – Part X, Subpart Y, Section Z; ...]
+ 
+
+Answer: 
+Yes, you are eligible for Jobseeker Support if you can't work due to health reasons.
+
+Reasoning: 
+According to Section 141(1), a beneficiary is considered to have the capacity to seek, undertake, and be available for part-time work if they do not have a determination under that section that they do not have such capacity. Since there's no indication that you've been deemed incapable of working due to your health conditions, you should be eligible for Jobseeker Support. However, it's worth noting that the decision to grant or deny Jobseeker Support is ultimately at the discretion of the Medical Board, as stated in Section 141(1). 
+
+Citations: 
+[SSA 2018 – Part 3, Subpart 3, Section 141(1)]
+
+=== METRICS (Experiment 4) ===
+rougeL: 0.0293
+bertscore: -0.2967
+precision@k: 0.0000
+recall@k: 0.0000
+section_coverage: 0.0000
